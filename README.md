@@ -6,7 +6,7 @@
 
 litecore-tealcoin-message adds support for verifying and signing tealcoin messages in [Node.js](http://nodejs.org/) and web browsers.
 
-See [the main litecore repo](https://github.com/tealcoin-project/teal-litecore) for more information.
+See [the main litecore repo](https://github.com/tealcoin-project/litecore-teal) for more information.
 
 ## Getting Started
 
@@ -42,7 +42,7 @@ See [CONTRIBUTING.md](https://github.com/tealcoin-project/litecore/blob/master/C
 
 ## License
 
-Code released under [the MIT license](https://github.com/tealcoin-project/teal-litecore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/tealcoin-project/litecore-teal/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
 Copyright 2016 The Tealcoin Core Developers
