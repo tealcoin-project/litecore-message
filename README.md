@@ -1,4 +1,4 @@
-<img src="http://bitcore.io/images/home-logo.626a6645.png">
+<img src="http://bitcore.io/images/home-logo.626a6645.png" height=256>
 # Tealcoin Message Verification and Signing for Bitcore
 
 
