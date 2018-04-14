@@ -1,8 +1,10 @@
-<img src="http://bitcore.io/images/home-logo.626a6645.png" height=256>
+<img src="http://bitcore.io/images/home-logo.626a6645.png" height=200>
 # Tealcoin Message Verification and Signing for Bitcore
 
 
 [![NPM Package](https://img.shields.io/npm/v/litecore-tealcoin-message.svg?style=flat-square)](https://www.npmjs.org/package/litecore-tealcoin-message)
+[![Build Status](https://img.shields.io/travis/litecoin-project/litecore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/litecoin-project/litecore-message)
+[![Coverage Status](https://img.shields.io/coveralls/litecoin-project/litecore-message.svg?style=flat-square)](https://coveralls.io/r/litecoin-project/litecore-message?branch=master)
 
 litecore-tealcoin-message adds support for verifying and signing tealcoin messages in [Node.js](http://nodejs.org/) and web browsers.
 
