@@ -8,10 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "gulp lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "coverage": "gulp coverage",
-    "build": "gulp"
   },
   "keywords": [
     "tealcoin",
@@ -27,12 +24,6 @@
   },
   "dependencies": {
     "litecore-tealcoin-lib": "^0.13.22"
-  },
-  "devDependencies": {
-    "litecore-build": "github:tealcoin-project/litecore-build",
-    "brfs": "^1.3.0",
-    "chai": "~1.10.0",
-    "gulp": "^3.8.10"
   },
   "license": "MIT",
   "bugs": {

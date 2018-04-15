@@ -38,6 +38,21 @@ var signature = 'H9XORZInM3B3a8BNS65kwgmbnqEuq73rjAQ5VKyVzTrzPOdHdHOY2lfoph5auvM
 var verified = Message('hello, world').verify(address, signature);
 ```
 
+## Building the Browser Bundle
+
+To build a litecore-tealcoin-message full bundle for the browser:
+
+```sh
+npm install --global broserify
+npm install --global uglify-js
+
+cd litecore-tealcoin-message
+browserify --require ./index.js --external litecore-tealcoin-lib > litecore-tealcoin-message.js
+uglifyjs --compress --mangle --rename litecore-tealcoin-message.js > litecore-tealcoin-message.min.js
+```
+
+This will generate files named `litecore-tealcoin-message.js` and `litecore-tealcoin-message.min.js`.
+
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/tealcoin-project/litecore/blob/master/CONTRIBUTING.md) on the main litecore repo for information about how to contribute.
