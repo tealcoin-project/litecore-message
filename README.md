@@ -1,5 +1,5 @@
 <img src="http://bitcore.io/images/home-logo.626a6645.png" height=200>
-# Tealcoin Message Verification and Signing for Bitcore
+# Tealcoin Message Verification and Signing for Tealcoin
 
 
 [![NPM Package](https://img.shields.io/npm/v/litecore-tealcoin-message.svg?style=flat-square)](https://www.npmjs.org/package/litecore-tealcoin-message)
@@ -14,6 +14,7 @@ See [Tealcoin Explorer Full Node](https://github.com/tealcoin-project/tealcoin-e
 
 ```sh
 npm install litecore-tealcoin-message
+npm install litecore-tealcoin-lib
 ```
 
 To sign a message:
@@ -22,16 +23,18 @@ To sign a message:
 var litecore = require('litecore-tealcoin-lib');
 var Message = require('litecore-tealcoin-message');
 
-var privateKey = litecore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
+var privateKey = litecore.PrivateKey.fromWIF('BPLJUL19hG4Jatx3hFkoLFBUiMvcKLBSdZakh1jAxn5SSDvZxcLX');
 var signature = Message('hello, world').sign(privateKey);
+console.log(signature);
 ```
 
 To verify a message:
 
 ```javascript
-var address = 'n1ZCYg9YXtB5XCZazLxSmPDa8iwJRZHhGx';
-var signature = 'H9XORZInM3B3a8BNS65kwgmbnqEuq73rjAQ5VKyVzTrzPOdHdHOY2lfoph5auvMgLSr7bh+nEQSG/f2kv9TnsbY=';
+var address = 'TP2F9bXmTJ8XEY38BvjocBQoftyxX2rJTJ';
+var signature = 'H1S5UOm+TA+Ho8jBY3Tygsz3oBK06ntwjr8J/RSQuPc5DTidOKE+9GvHxy/fpggzASgpav2XhvGRQrLtiaB3qDI=';
 var verified = Message('hello, world').verify(address, signature);
+console.log(verified);
 ```
 
 ## Building the Browser Bundle

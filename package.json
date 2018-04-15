@@ -1,6 +1,6 @@
 {
   "name": "litecore-tealcoin-message",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Tealcoin Messages for Bitcore",
   "author": {
     "name": "BitPay",
@@ -21,9 +21,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tealcoin-project/litecore-tealcoin-message.git"
-  },
-  "dependencies": {
-    "litecore-tealcoin-lib": "^0.13.22"
   },
   "license": "MIT",
   "bugs": {
