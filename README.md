@@ -8,7 +8,7 @@
 
 litecore-tealcoin-message adds support for verifying and signing tealcoin messages in [Node.js](http://nodejs.org/) and web browsers.
 
-See [the main litecore repo](https://github.com/tealcoin-project/litecore-teal) for more information.
+See [Tealcoin Explorer Full Node](https://github.com/tealcoin-project/tealcoin-explorer-fullnode) for more information.
 
 ## Getting Started
 
