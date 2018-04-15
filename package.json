@@ -1,6 +1,6 @@
 {
   "name": "litecore-tealcoin-message",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Tealcoin Messages for Bitcore",
   "author": {
     "name": "BitPay",
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/tealcoin-project/litecore-tealcoin-message/issues"
   },
-  "homepage": "https://github.com/tealcoin-project/litecore-tealcoin-message#readme",
+  "homepage": "https://github.com/tealcoin-project/litecore-tealcoin-message",
   "maintainers": [
     {
       "name": "coblee",

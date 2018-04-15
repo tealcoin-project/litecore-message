@@ -16,10 +16,6 @@ See [Tealcoin Explorer Full Node](https://github.com/tealcoin-project/tealcoin-e
 npm install litecore-tealcoin-message
 ```
 
-```sh
-bower install litecore-tealcoin-message
-```
-
 To sign a message:
 
 ```javascript
