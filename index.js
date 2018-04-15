@@ -1,4 +1,4 @@
-var litecore = require('litecore-tealcoin-lib');
-litecore.Message = require('./lib/message');
+var Message = require('./lib/message');
+Message.litecore = require('litecore-tealcoin-lib');
 
-module.exports = litecore.Message;
+module.exports = Message;
