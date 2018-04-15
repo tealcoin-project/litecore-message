@@ -14,27 +14,27 @@ See [Tealcoin Explorer Full Node](https://github.com/tealcoin-project/tealcoin-e
 
 ```sh
 npm install litecore-tealcoin-message
-npm install litecore-tealcoin-lib
 ```
 
 To sign a message:
 
 ```javascript
-var litecore = require('litecore-tealcoin-lib');
 var Message = require('litecore-tealcoin-message');
 
-var privateKey = litecore.PrivateKey.fromWIF('BPLJUL19hG4Jatx3hFkoLFBUiMvcKLBSdZakh1jAxn5SSDvZxcLX');
+var privateKey = Message.litecore.PrivateKey.fromWIF('BPLJUL19hG4Jatx3hFkoLFBUiMvcKLBSdZakh1jAxn5SSDvZxcLX');
 var signature = Message('hello, world').sign(privateKey);
-console.log(signature);
+console.log(signature); // H1S5UOm+TA+Ho8jBY3Tygsz3oBK06ntwjr8J/RSQuPc5DTidOKE+9GvHxy/fpggzASgpav2XhvGRQrLtiaB3qDI=
 ```
 
 To verify a message:
 
 ```javascript
+var Message = require('litecore-tealcoin-message');
+
 var address = 'TP2F9bXmTJ8XEY38BvjocBQoftyxX2rJTJ';
 var signature = 'H1S5UOm+TA+Ho8jBY3Tygsz3oBK06ntwjr8J/RSQuPc5DTidOKE+9GvHxy/fpggzASgpav2XhvGRQrLtiaB3qDI=';
 var verified = Message('hello, world').verify(address, signature);
-console.log(verified);
+console.log(verified); // true
 ```
 
 ## Building the Browser Bundle
