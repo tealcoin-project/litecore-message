@@ -46,7 +46,7 @@ npm install --global broserify
 npm install --global uglify-js
 
 cd litecore-tealcoin-message
-browserify --require ./index.js --external litecore-tealcoin-lib > litecore-tealcoin-message.js
+browserify --require ./index.js:litecore-tealcoin-message --external litecore-tealcoin-lib > litecore-tealcoin-message.js
 uglifyjs --compress --mangle --rename litecore-tealcoin-message.js > litecore-tealcoin-message.min.js
 ```
 
