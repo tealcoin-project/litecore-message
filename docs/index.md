@@ -1,35 +1,59 @@
-# Message Verification and Signing
-Bitcore implementation of [tealcoin message signing and verification](http://bitcoin.stackexchange.com/questions/3337/what-are-the-safety-guidelines-for-using-the-sign-message-feature/3339#3339). This is used to cryptographically prove that a certain message was signed by the holder of an address private key.
+# Tealcoin Message Verification and Signing for Tealcoin
 
-For more information refer to the [litecore-tealcoin-message](https://github.com/tealcoin-project/litecore-tealcoin-message) github repo.
+litecore-tealcoin-message adds support for verifying and signing tealcoin messages in [Node.js](http://nodejs.org/) and web browsers.
 
-## Installation
-Message Verification and Signing is implemented as a separate module and you must add it to your dependencies:
+See [Tealcoin Explorer Full Node](https://github.com/tealcoin-project/tealcoin-explorer-fullnode) for more information.
 
-For node projects:
+## Getting Started
 
-```bash
-npm install litecore-tealcoin-message --save
+```sh
+npm install litecore-tealcoin-message
 ```
 
-For client-side projects:
-
-```bash
-bower install litecore-tealcoin-message --save
-```
-
-## Example
 To sign a message:
 
 ```javascript
-var privateKey = PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
-var signature = Message('hello, world').sign(privateKey);
+var Message = require('litecore-tealcoin-message');
+
+var privateKey = Message.litecore_tealcoin_lib.PrivateKey.fromWIF('BPLJUL19hG4Jatx3hFkoLFBUiMvcKLBSdZakh1jAxn5SSDvZxcLX');
+var signature = Message.tealcoin_message('hello, world').sign(privateKey);
+console.log(signature); // H1S5UOm+TA+Ho8jBY3Tygsz3oBK06ntwjr8J/RSQuPc5DTidOKE+9GvHxy/fpggzASgpav2XhvGRQrLtiaB3qDI=
 ```
 
 To verify a message:
 
 ```javascript
-var address = 'n1ZCYg9YXtB5XCZazLxSmPDa8iwJRZHhGx';
-var signature = 'H9XORZInM3B3a8BNS65kwgmbnqEuq73rjAQ5VKyVzTrzPOdHdHOY2lfoph5auvMgLSr7bh+nEQSG/f2kv9TnsbY=';
-var verified = Message('hello, world').verify(address, signature);
+var Message = require('litecore-tealcoin-message');
+
+var address = 'TP2F9bXmTJ8XEY38BvjocBQoftyxX2rJTJ';
+var signature = 'H1S5UOm+TA+Ho8jBY3Tygsz3oBK06ntwjr8J/RSQuPc5DTidOKE+9GvHxy/fpggzASgpav2XhvGRQrLtiaB3qDI=';
+var verified = Message.tealcoin_message('hello, world').verify(address, signature);
+console.log(verified); // true
 ```
+
+## Building the Browser Bundle
+
+To build a litecore-tealcoin-message full bundle for the browser:
+
+```sh
+npm install --global broserify
+npm install --global uglify-js
+
+cd litecore-tealcoin-message
+browserify --require ./index.js --external litecore-tealcoin-lib > litecore-tealcoin-message.js
+uglifyjs --compress --mangle --rename litecore-tealcoin-message.js > litecore-tealcoin-message.min.js
+```
+
+This will generate files named `litecore-tealcoin-message.js` and `litecore-tealcoin-message.min.js`.
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/tealcoin-project/litecore/blob/master/CONTRIBUTING.md) on the main litecore repo for information about how to contribute.
+
+## License
+
+Code released under [the MIT license](https://github.com/tealcoin-project/litecore-teal/blob/master/LICENSE).
+
+Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
+Copyright 2016 The Tealcoin Core Developers
+
