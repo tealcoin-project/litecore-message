@@ -44,6 +44,7 @@ To build a litecore-tealcoin-message full bundle for the browser:
 ```sh
 npm install --global broserify
 npm install --global uglify-js
+npm install litecore-tealcoin-message
 
 cd litecore-tealcoin-message
 browserify --require ./index.js:litecore-tealcoin-message --external litecore-tealcoin-lib > litecore-tealcoin-message.js
